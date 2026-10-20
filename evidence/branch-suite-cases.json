@@ -1,0 +1,2311 @@
+{
+  "schema": "bomblab-direct-challenge-suite-v1",
+  "generator": "evidence/run_branch_suite.py",
+  "generator_sha256": "dfc36dd23d22fe6c71098bbc3fa21b55dd2b4adcfd493dbc85767c82156b0a27",
+  "invocation_cwd": "/mnt/c/Users/\u5f20\u5723\u7693/Desktop/zsh/\u5927\u4e8c/hw-solver/task-20261016-003619-bomb-author-d0aeaa382275",
+  "argv": [
+    "evidence/run_branch_suite.py",
+    "--root",
+    "work/BombLab",
+    "--solver",
+    "cache/defuser.tested",
+    "--bomb",
+    "work/BombLab/bomb",
+    "--manifest",
+    "evidence/branch-suite-cases.json",
+    "--results",
+    "evidence/branch-suite-results.json",
+    "--summary",
+    "evidence/branch-suite.txt"
+  ],
+  "hashes": {
+    "defuser_source_sha256": "b7684f22ad44745bac27faad1036e3bc290f167f29f3b147909ca50045d65e29",
+    "solver_executable_sha256": "d50fc10015707e060dbf8ad2656b53621e73a66acf3f92e2f760b775c0a6142d",
+    "bomb_sha256": "ecbbf2c8f382cd638e762e4494f41bff160ad80c87ea0c7da720914fdccf47b7"
+  },
+  "coverage_counts": {
+    "phase1_boundaries": 5,
+    "phase2_boundaries": 5,
+    "phase3_selectors": 8,
+    "phase4_targets": 128,
+    "phase5_head_step_pairs": 32,
+    "phase6_table_index_pairs": 64,
+    "total": 242
+  },
+  "cases": [
+    {
+      "id": "p1-boundary-zero",
+      "phase": 1,
+      "challenge_decimal": "0",
+      "challenge_hex": "0x0000000000000000",
+      "coverage": {
+        "boundary": "zero"
+      }
+    },
+    {
+      "id": "p1-boundary-all-ones",
+      "phase": 1,
+      "challenge_decimal": "18446744073709551615",
+      "challenge_hex": "0xffffffffffffffff",
+      "coverage": {
+        "boundary": "all-ones"
+      }
+    },
+    {
+      "id": "p1-boundary-lo-max",
+      "phase": 1,
+      "challenge_decimal": "4294967295",
+      "challenge_hex": "0x00000000ffffffff",
+      "coverage": {
+        "boundary": "lo-max"
+      }
+    },
+    {
+      "id": "p1-boundary-hi-max",
+      "phase": 1,
+      "challenge_decimal": "18446744069414584320",
+      "challenge_hex": "0xffffffff00000000",
+      "coverage": {
+        "boundary": "hi-max"
+      }
+    },
+    {
+      "id": "p1-boundary-both-sign-bits",
+      "phase": 1,
+      "challenge_decimal": "9223372039002259456",
+      "challenge_hex": "0x8000000080000000",
+      "coverage": {
+        "boundary": "both-sign-bits"
+      }
+    },
+    {
+      "id": "p2-boundary-zero",
+      "phase": 2,
+      "challenge_decimal": "0",
+      "challenge_hex": "0x0000000000000000",
+      "coverage": {
+        "boundary": "zero"
+      }
+    },
+    {
+      "id": "p2-boundary-all-ones",
+      "phase": 2,
+      "challenge_decimal": "18446744073709551615",
+      "challenge_hex": "0xffffffffffffffff",
+      "coverage": {
+        "boundary": "all-ones"
+      }
+    },
+    {
+      "id": "p2-boundary-initial-window-max",
+      "phase": 2,
+      "challenge_decimal": "1065151889408",
+      "challenge_hex": "0x000000f800000000",
+      "coverage": {
+        "boundary": "initial-window-max"
+      }
+    },
+    {
+      "id": "p2-boundary-recurrence-window-max",
+      "phase": 2,
+      "challenge_decimal": "134215680",
+      "challenge_hex": "0x0000000007fff800",
+      "coverage": {
+        "boundary": "recurrence-window-max"
+      }
+    },
+    {
+      "id": "p2-boundary-high-bit-only",
+      "phase": 2,
+      "challenge_decimal": "9223372036854775808",
+      "challenge_hex": "0x8000000000000000",
+      "coverage": {
+        "boundary": "high-bit-only"
+      }
+    },
+    {
+      "id": "p3-selector-0",
+      "phase": 3,
+      "challenge_decimal": "0",
+      "challenge_hex": "0x0000000000000000",
+      "coverage": {
+        "selector": 0
+      }
+    },
+    {
+      "id": "p3-selector-1",
+      "phase": 3,
+      "challenge_decimal": "1",
+      "challenge_hex": "0x0000000000000001",
+      "coverage": {
+        "selector": 1
+      }
+    },
+    {
+      "id": "p3-selector-2",
+      "phase": 3,
+      "challenge_decimal": "2",
+      "challenge_hex": "0x0000000000000002",
+      "coverage": {
+        "selector": 2
+      }
+    },
+    {
+      "id": "p3-selector-3",
+      "phase": 3,
+      "challenge_decimal": "3",
+      "challenge_hex": "0x0000000000000003",
+      "coverage": {
+        "selector": 3
+      }
+    },
+    {
+      "id": "p3-selector-4",
+      "phase": 3,
+      "challenge_decimal": "4",
+      "challenge_hex": "0x0000000000000004",
+      "coverage": {
+        "selector": 4
+      }
+    },
+    {
+      "id": "p3-selector-5",
+      "phase": 3,
+      "challenge_decimal": "5",
+      "challenge_hex": "0x0000000000000005",
+      "coverage": {
+        "selector": 5
+      }
+    },
+    {
+      "id": "p3-selector-6",
+      "phase": 3,
+      "challenge_decimal": "6",
+      "challenge_hex": "0x0000000000000006",
+      "coverage": {
+        "selector": 6
+      }
+    },
+    {
+      "id": "p3-selector-7",
+      "phase": 3,
+      "challenge_decimal": "7",
+      "challenge_hex": "0x0000000000000007",
+      "coverage": {
+        "selector": 7
+      }
+    },
+    {
+      "id": "p4-target-000",
+      "phase": 4,
+      "challenge_decimal": "0",
+      "challenge_hex": "0x0000000000000000",
+      "coverage": {
+        "target": 0
+      }
+    },
+    {
+      "id": "p4-target-001",
+      "phase": 4,
+      "challenge_decimal": "1",
+      "challenge_hex": "0x0000000000000001",
+      "coverage": {
+        "target": 1
+      }
+    },
+    {
+      "id": "p4-target-002",
+      "phase": 4,
+      "challenge_decimal": "2",
+      "challenge_hex": "0x0000000000000002",
+      "coverage": {
+        "target": 2
+      }
+    },
+    {
+      "id": "p4-target-003",
+      "phase": 4,
+      "challenge_decimal": "3",
+      "challenge_hex": "0x0000000000000003",
+      "coverage": {
+        "target": 3
+      }
+    },
+    {
+      "id": "p4-target-004",
+      "phase": 4,
+      "challenge_decimal": "4",
+      "challenge_hex": "0x0000000000000004",
+      "coverage": {
+        "target": 4
+      }
+    },
+    {
+      "id": "p4-target-005",
+      "phase": 4,
+      "challenge_decimal": "5",
+      "challenge_hex": "0x0000000000000005",
+      "coverage": {
+        "target": 5
+      }
+    },
+    {
+      "id": "p4-target-006",
+      "phase": 4,
+      "challenge_decimal": "6",
+      "challenge_hex": "0x0000000000000006",
+      "coverage": {
+        "target": 6
+      }
+    },
+    {
+      "id": "p4-target-007",
+      "phase": 4,
+      "challenge_decimal": "7",
+      "challenge_hex": "0x0000000000000007",
+      "coverage": {
+        "target": 7
+      }
+    },
+    {
+      "id": "p4-target-008",
+      "phase": 4,
+      "challenge_decimal": "8",
+      "challenge_hex": "0x0000000000000008",
+      "coverage": {
+        "target": 8
+      }
+    },
+    {
+      "id": "p4-target-009",
+      "phase": 4,
+      "challenge_decimal": "9",
+      "challenge_hex": "0x0000000000000009",
+      "coverage": {
+        "target": 9
+      }
+    },
+    {
+      "id": "p4-target-010",
+      "phase": 4,
+      "challenge_decimal": "10",
+      "challenge_hex": "0x000000000000000a",
+      "coverage": {
+        "target": 10
+      }
+    },
+    {
+      "id": "p4-target-011",
+      "phase": 4,
+      "challenge_decimal": "11",
+      "challenge_hex": "0x000000000000000b",
+      "coverage": {
+        "target": 11
+      }
+    },
+    {
+      "id": "p4-target-012",
+      "phase": 4,
+      "challenge_decimal": "12",
+      "challenge_hex": "0x000000000000000c",
+      "coverage": {
+        "target": 12
+      }
+    },
+    {
+      "id": "p4-target-013",
+      "phase": 4,
+      "challenge_decimal": "13",
+      "challenge_hex": "0x000000000000000d",
+      "coverage": {
+        "target": 13
+      }
+    },
+    {
+      "id": "p4-target-014",
+      "phase": 4,
+      "challenge_decimal": "14",
+      "challenge_hex": "0x000000000000000e",
+      "coverage": {
+        "target": 14
+      }
+    },
+    {
+      "id": "p4-target-015",
+      "phase": 4,
+      "challenge_decimal": "15",
+      "challenge_hex": "0x000000000000000f",
+      "coverage": {
+        "target": 15
+      }
+    },
+    {
+      "id": "p4-target-016",
+      "phase": 4,
+      "challenge_decimal": "16",
+      "challenge_hex": "0x0000000000000010",
+      "coverage": {
+        "target": 16
+      }
+    },
+    {
+      "id": "p4-target-017",
+      "phase": 4,
+      "challenge_decimal": "17",
+      "challenge_hex": "0x0000000000000011",
+      "coverage": {
+        "target": 17
+      }
+    },
+    {
+      "id": "p4-target-018",
+      "phase": 4,
+      "challenge_decimal": "18",
+      "challenge_hex": "0x0000000000000012",
+      "coverage": {
+        "target": 18
+      }
+    },
+    {
+      "id": "p4-target-019",
+      "phase": 4,
+      "challenge_decimal": "19",
+      "challenge_hex": "0x0000000000000013",
+      "coverage": {
+        "target": 19
+      }
+    },
+    {
+      "id": "p4-target-020",
+      "phase": 4,
+      "challenge_decimal": "20",
+      "challenge_hex": "0x0000000000000014",
+      "coverage": {
+        "target": 20
+      }
+    },
+    {
+      "id": "p4-target-021",
+      "phase": 4,
+      "challenge_decimal": "21",
+      "challenge_hex": "0x0000000000000015",
+      "coverage": {
+        "target": 21
+      }
+    },
+    {
+      "id": "p4-target-022",
+      "phase": 4,
+      "challenge_decimal": "22",
+      "challenge_hex": "0x0000000000000016",
+      "coverage": {
+        "target": 22
+      }
+    },
+    {
+      "id": "p4-target-023",
+      "phase": 4,
+      "challenge_decimal": "23",
+      "challenge_hex": "0x0000000000000017",
+      "coverage": {
+        "target": 23
+      }
+    },
+    {
+      "id": "p4-target-024",
+      "phase": 4,
+      "challenge_decimal": "24",
+      "challenge_hex": "0x0000000000000018",
+      "coverage": {
+        "target": 24
+      }
+    },
+    {
+      "id": "p4-target-025",
+      "phase": 4,
+      "challenge_decimal": "25",
+      "challenge_hex": "0x0000000000000019",
+      "coverage": {
+        "target": 25
+      }
+    },
+    {
+      "id": "p4-target-026",
+      "phase": 4,
+      "challenge_decimal": "26",
+      "challenge_hex": "0x000000000000001a",
+      "coverage": {
+        "target": 26
+      }
+    },
+    {
+      "id": "p4-target-027",
+      "phase": 4,
+      "challenge_decimal": "27",
+      "challenge_hex": "0x000000000000001b",
+      "coverage": {
+        "target": 27
+      }
+    },
+    {
+      "id": "p4-target-028",
+      "phase": 4,
+      "challenge_decimal": "28",
+      "challenge_hex": "0x000000000000001c",
+      "coverage": {
+        "target": 28
+      }
+    },
+    {
+      "id": "p4-target-029",
+      "phase": 4,
+      "challenge_decimal": "29",
+      "challenge_hex": "0x000000000000001d",
+      "coverage": {
+        "target": 29
+      }
+    },
+    {
+      "id": "p4-target-030",
+      "phase": 4,
+      "challenge_decimal": "30",
+      "challenge_hex": "0x000000000000001e",
+      "coverage": {
+        "target": 30
+      }
+    },
+    {
+      "id": "p4-target-031",
+      "phase": 4,
+      "challenge_decimal": "31",
+      "challenge_hex": "0x000000000000001f",
+      "coverage": {
+        "target": 31
+      }
+    },
+    {
+      "id": "p4-target-032",
+      "phase": 4,
+      "challenge_decimal": "32",
+      "challenge_hex": "0x0000000000000020",
+      "coverage": {
+        "target": 32
+      }
+    },
+    {
+      "id": "p4-target-033",
+      "phase": 4,
+      "challenge_decimal": "33",
+      "challenge_hex": "0x0000000000000021",
+      "coverage": {
+        "target": 33
+      }
+    },
+    {
+      "id": "p4-target-034",
+      "phase": 4,
+      "challenge_decimal": "34",
+      "challenge_hex": "0x0000000000000022",
+      "coverage": {
+        "target": 34
+      }
+    },
+    {
+      "id": "p4-target-035",
+      "phase": 4,
+      "challenge_decimal": "35",
+      "challenge_hex": "0x0000000000000023",
+      "coverage": {
+        "target": 35
+      }
+    },
+    {
+      "id": "p4-target-036",
+      "phase": 4,
+      "challenge_decimal": "36",
+      "challenge_hex": "0x0000000000000024",
+      "coverage": {
+        "target": 36
+      }
+    },
+    {
+      "id": "p4-target-037",
+      "phase": 4,
+      "challenge_decimal": "37",
+      "challenge_hex": "0x0000000000000025",
+      "coverage": {
+        "target": 37
+      }
+    },
+    {
+      "id": "p4-target-038",
+      "phase": 4,
+      "challenge_decimal": "38",
+      "challenge_hex": "0x0000000000000026",
+      "coverage": {
+        "target": 38
+      }
+    },
+    {
+      "id": "p4-target-039",
+      "phase": 4,
+      "challenge_decimal": "39",
+      "challenge_hex": "0x0000000000000027",
+      "coverage": {
+        "target": 39
+      }
+    },
+    {
+      "id": "p4-target-040",
+      "phase": 4,
+      "challenge_decimal": "40",
+      "challenge_hex": "0x0000000000000028",
+      "coverage": {
+        "target": 40
+      }
+    },
+    {
+      "id": "p4-target-041",
+      "phase": 4,
+      "challenge_decimal": "41",
+      "challenge_hex": "0x0000000000000029",
+      "coverage": {
+        "target": 41
+      }
+    },
+    {
+      "id": "p4-target-042",
+      "phase": 4,
+      "challenge_decimal": "42",
+      "challenge_hex": "0x000000000000002a",
+      "coverage": {
+        "target": 42
+      }
+    },
+    {
+      "id": "p4-target-043",
+      "phase": 4,
+      "challenge_decimal": "43",
+      "challenge_hex": "0x000000000000002b",
+      "coverage": {
+        "target": 43
+      }
+    },
+    {
+      "id": "p4-target-044",
+      "phase": 4,
+      "challenge_decimal": "44",
+      "challenge_hex": "0x000000000000002c",
+      "coverage": {
+        "target": 44
+      }
+    },
+    {
+      "id": "p4-target-045",
+      "phase": 4,
+      "challenge_decimal": "45",
+      "challenge_hex": "0x000000000000002d",
+      "coverage": {
+        "target": 45
+      }
+    },
+    {
+      "id": "p4-target-046",
+      "phase": 4,
+      "challenge_decimal": "46",
+      "challenge_hex": "0x000000000000002e",
+      "coverage": {
+        "target": 46
+      }
+    },
+    {
+      "id": "p4-target-047",
+      "phase": 4,
+      "challenge_decimal": "47",
+      "challenge_hex": "0x000000000000002f",
+      "coverage": {
+        "target": 47
+      }
+    },
+    {
+      "id": "p4-target-048",
+      "phase": 4,
+      "challenge_decimal": "48",
+      "challenge_hex": "0x0000000000000030",
+      "coverage": {
+        "target": 48
+      }
+    },
+    {
+      "id": "p4-target-049",
+      "phase": 4,
+      "challenge_decimal": "49",
+      "challenge_hex": "0x0000000000000031",
+      "coverage": {
+        "target": 49
+      }
+    },
+    {
+      "id": "p4-target-050",
+      "phase": 4,
+      "challenge_decimal": "50",
+      "challenge_hex": "0x0000000000000032",
+      "coverage": {
+        "target": 50
+      }
+    },
+    {
+      "id": "p4-target-051",
+      "phase": 4,
+      "challenge_decimal": "51",
+      "challenge_hex": "0x0000000000000033",
+      "coverage": {
+        "target": 51
+      }
+    },
+    {
+      "id": "p4-target-052",
+      "phase": 4,
+      "challenge_decimal": "52",
+      "challenge_hex": "0x0000000000000034",
+      "coverage": {
+        "target": 52
+      }
+    },
+    {
+      "id": "p4-target-053",
+      "phase": 4,
+      "challenge_decimal": "53",
+      "challenge_hex": "0x0000000000000035",
+      "coverage": {
+        "target": 53
+      }
+    },
+    {
+      "id": "p4-target-054",
+      "phase": 4,
+      "challenge_decimal": "54",
+      "challenge_hex": "0x0000000000000036",
+      "coverage": {
+        "target": 54
+      }
+    },
+    {
+      "id": "p4-target-055",
+      "phase": 4,
+      "challenge_decimal": "55",
+      "challenge_hex": "0x0000000000000037",
+      "coverage": {
+        "target": 55
+      }
+    },
+    {
+      "id": "p4-target-056",
+      "phase": 4,
+      "challenge_decimal": "56",
+      "challenge_hex": "0x0000000000000038",
+      "coverage": {
+        "target": 56
+      }
+    },
+    {
+      "id": "p4-target-057",
+      "phase": 4,
+      "challenge_decimal": "57",
+      "challenge_hex": "0x0000000000000039",
+      "coverage": {
+        "target": 57
+      }
+    },
+    {
+      "id": "p4-target-058",
+      "phase": 4,
+      "challenge_decimal": "58",
+      "challenge_hex": "0x000000000000003a",
+      "coverage": {
+        "target": 58
+      }
+    },
+    {
+      "id": "p4-target-059",
+      "phase": 4,
+      "challenge_decimal": "59",
+      "challenge_hex": "0x000000000000003b",
+      "coverage": {
+        "target": 59
+      }
+    },
+    {
+      "id": "p4-target-060",
+      "phase": 4,
+      "challenge_decimal": "60",
+      "challenge_hex": "0x000000000000003c",
+      "coverage": {
+        "target": 60
+      }
+    },
+    {
+      "id": "p4-target-061",
+      "phase": 4,
+      "challenge_decimal": "61",
+      "challenge_hex": "0x000000000000003d",
+      "coverage": {
+        "target": 61
+      }
+    },
+    {
+      "id": "p4-target-062",
+      "phase": 4,
+      "challenge_decimal": "62",
+      "challenge_hex": "0x000000000000003e",
+      "coverage": {
+        "target": 62
+      }
+    },
+    {
+      "id": "p4-target-063",
+      "phase": 4,
+      "challenge_decimal": "63",
+      "challenge_hex": "0x000000000000003f",
+      "coverage": {
+        "target": 63
+      }
+    },
+    {
+      "id": "p4-target-064",
+      "phase": 4,
+      "challenge_decimal": "64",
+      "challenge_hex": "0x0000000000000040",
+      "coverage": {
+        "target": 64
+      }
+    },
+    {
+      "id": "p4-target-065",
+      "phase": 4,
+      "challenge_decimal": "65",
+      "challenge_hex": "0x0000000000000041",
+      "coverage": {
+        "target": 65
+      }
+    },
+    {
+      "id": "p4-target-066",
+      "phase": 4,
+      "challenge_decimal": "66",
+      "challenge_hex": "0x0000000000000042",
+      "coverage": {
+        "target": 66
+      }
+    },
+    {
+      "id": "p4-target-067",
+      "phase": 4,
+      "challenge_decimal": "67",
+      "challenge_hex": "0x0000000000000043",
+      "coverage": {
+        "target": 67
+      }
+    },
+    {
+      "id": "p4-target-068",
+      "phase": 4,
+      "challenge_decimal": "68",
+      "challenge_hex": "0x0000000000000044",
+      "coverage": {
+        "target": 68
+      }
+    },
+    {
+      "id": "p4-target-069",
+      "phase": 4,
+      "challenge_decimal": "69",
+      "challenge_hex": "0x0000000000000045",
+      "coverage": {
+        "target": 69
+      }
+    },
+    {
+      "id": "p4-target-070",
+      "phase": 4,
+      "challenge_decimal": "70",
+      "challenge_hex": "0x0000000000000046",
+      "coverage": {
+        "target": 70
+      }
+    },
+    {
+      "id": "p4-target-071",
+      "phase": 4,
+      "challenge_decimal": "71",
+      "challenge_hex": "0x0000000000000047",
+      "coverage": {
+        "target": 71
+      }
+    },
+    {
+      "id": "p4-target-072",
+      "phase": 4,
+      "challenge_decimal": "72",
+      "challenge_hex": "0x0000000000000048",
+      "coverage": {
+        "target": 72
+      }
+    },
+    {
+      "id": "p4-target-073",
+      "phase": 4,
+      "challenge_decimal": "73",
+      "challenge_hex": "0x0000000000000049",
+      "coverage": {
+        "target": 73
+      }
+    },
+    {
+      "id": "p4-target-074",
+      "phase": 4,
+      "challenge_decimal": "74",
+      "challenge_hex": "0x000000000000004a",
+      "coverage": {
+        "target": 74
+      }
+    },
+    {
+      "id": "p4-target-075",
+      "phase": 4,
+      "challenge_decimal": "75",
+      "challenge_hex": "0x000000000000004b",
+      "coverage": {
+        "target": 75
+      }
+    },
+    {
+      "id": "p4-target-076",
+      "phase": 4,
+      "challenge_decimal": "76",
+      "challenge_hex": "0x000000000000004c",
+      "coverage": {
+        "target": 76
+      }
+    },
+    {
+      "id": "p4-target-077",
+      "phase": 4,
+      "challenge_decimal": "77",
+      "challenge_hex": "0x000000000000004d",
+      "coverage": {
+        "target": 77
+      }
+    },
+    {
+      "id": "p4-target-078",
+      "phase": 4,
+      "challenge_decimal": "78",
+      "challenge_hex": "0x000000000000004e",
+      "coverage": {
+        "target": 78
+      }
+    },
+    {
+      "id": "p4-target-079",
+      "phase": 4,
+      "challenge_decimal": "79",
+      "challenge_hex": "0x000000000000004f",
+      "coverage": {
+        "target": 79
+      }
+    },
+    {
+      "id": "p4-target-080",
+      "phase": 4,
+      "challenge_decimal": "80",
+      "challenge_hex": "0x0000000000000050",
+      "coverage": {
+        "target": 80
+      }
+    },
+    {
+      "id": "p4-target-081",
+      "phase": 4,
+      "challenge_decimal": "81",
+      "challenge_hex": "0x0000000000000051",
+      "coverage": {
+        "target": 81
+      }
+    },
+    {
+      "id": "p4-target-082",
+      "phase": 4,
+      "challenge_decimal": "82",
+      "challenge_hex": "0x0000000000000052",
+      "coverage": {
+        "target": 82
+      }
+    },
+    {
+      "id": "p4-target-083",
+      "phase": 4,
+      "challenge_decimal": "83",
+      "challenge_hex": "0x0000000000000053",
+      "coverage": {
+        "target": 83
+      }
+    },
+    {
+      "id": "p4-target-084",
+      "phase": 4,
+      "challenge_decimal": "84",
+      "challenge_hex": "0x0000000000000054",
+      "coverage": {
+        "target": 84
+      }
+    },
+    {
+      "id": "p4-target-085",
+      "phase": 4,
+      "challenge_decimal": "85",
+      "challenge_hex": "0x0000000000000055",
+      "coverage": {
+        "target": 85
+      }
+    },
+    {
+      "id": "p4-target-086",
+      "phase": 4,
+      "challenge_decimal": "86",
+      "challenge_hex": "0x0000000000000056",
+      "coverage": {
+        "target": 86
+      }
+    },
+    {
+      "id": "p4-target-087",
+      "phase": 4,
+      "challenge_decimal": "87",
+      "challenge_hex": "0x0000000000000057",
+      "coverage": {
+        "target": 87
+      }
+    },
+    {
+      "id": "p4-target-088",
+      "phase": 4,
+      "challenge_decimal": "88",
+      "challenge_hex": "0x0000000000000058",
+      "coverage": {
+        "target": 88
+      }
+    },
+    {
+      "id": "p4-target-089",
+      "phase": 4,
+      "challenge_decimal": "89",
+      "challenge_hex": "0x0000000000000059",
+      "coverage": {
+        "target": 89
+      }
+    },
+    {
+      "id": "p4-target-090",
+      "phase": 4,
+      "challenge_decimal": "90",
+      "challenge_hex": "0x000000000000005a",
+      "coverage": {
+        "target": 90
+      }
+    },
+    {
+      "id": "p4-target-091",
+      "phase": 4,
+      "challenge_decimal": "91",
+      "challenge_hex": "0x000000000000005b",
+      "coverage": {
+        "target": 91
+      }
+    },
+    {
+      "id": "p4-target-092",
+      "phase": 4,
+      "challenge_decimal": "92",
+      "challenge_hex": "0x000000000000005c",
+      "coverage": {
+        "target": 92
+      }
+    },
+    {
+      "id": "p4-target-093",
+      "phase": 4,
+      "challenge_decimal": "93",
+      "challenge_hex": "0x000000000000005d",
+      "coverage": {
+        "target": 93
+      }
+    },
+    {
+      "id": "p4-target-094",
+      "phase": 4,
+      "challenge_decimal": "94",
+      "challenge_hex": "0x000000000000005e",
+      "coverage": {
+        "target": 94
+      }
+    },
+    {
+      "id": "p4-target-095",
+      "phase": 4,
+      "challenge_decimal": "95",
+      "challenge_hex": "0x000000000000005f",
+      "coverage": {
+        "target": 95
+      }
+    },
+    {
+      "id": "p4-target-096",
+      "phase": 4,
+      "challenge_decimal": "96",
+      "challenge_hex": "0x0000000000000060",
+      "coverage": {
+        "target": 96
+      }
+    },
+    {
+      "id": "p4-target-097",
+      "phase": 4,
+      "challenge_decimal": "97",
+      "challenge_hex": "0x0000000000000061",
+      "coverage": {
+        "target": 97
+      }
+    },
+    {
+      "id": "p4-target-098",
+      "phase": 4,
+      "challenge_decimal": "98",
+      "challenge_hex": "0x0000000000000062",
+      "coverage": {
+        "target": 98
+      }
+    },
+    {
+      "id": "p4-target-099",
+      "phase": 4,
+      "challenge_decimal": "99",
+      "challenge_hex": "0x0000000000000063",
+      "coverage": {
+        "target": 99
+      }
+    },
+    {
+      "id": "p4-target-100",
+      "phase": 4,
+      "challenge_decimal": "100",
+      "challenge_hex": "0x0000000000000064",
+      "coverage": {
+        "target": 100
+      }
+    },
+    {
+      "id": "p4-target-101",
+      "phase": 4,
+      "challenge_decimal": "101",
+      "challenge_hex": "0x0000000000000065",
+      "coverage": {
+        "target": 101
+      }
+    },
+    {
+      "id": "p4-target-102",
+      "phase": 4,
+      "challenge_decimal": "102",
+      "challenge_hex": "0x0000000000000066",
+      "coverage": {
+        "target": 102
+      }
+    },
+    {
+      "id": "p4-target-103",
+      "phase": 4,
+      "challenge_decimal": "103",
+      "challenge_hex": "0x0000000000000067",
+      "coverage": {
+        "target": 103
+      }
+    },
+    {
+      "id": "p4-target-104",
+      "phase": 4,
+      "challenge_decimal": "104",
+      "challenge_hex": "0x0000000000000068",
+      "coverage": {
+        "target": 104
+      }
+    },
+    {
+      "id": "p4-target-105",
+      "phase": 4,
+      "challenge_decimal": "105",
+      "challenge_hex": "0x0000000000000069",
+      "coverage": {
+        "target": 105
+      }
+    },
+    {
+      "id": "p4-target-106",
+      "phase": 4,
+      "challenge_decimal": "106",
+      "challenge_hex": "0x000000000000006a",
+      "coverage": {
+        "target": 106
+      }
+    },
+    {
+      "id": "p4-target-107",
+      "phase": 4,
+      "challenge_decimal": "107",
+      "challenge_hex": "0x000000000000006b",
+      "coverage": {
+        "target": 107
+      }
+    },
+    {
+      "id": "p4-target-108",
+      "phase": 4,
+      "challenge_decimal": "108",
+      "challenge_hex": "0x000000000000006c",
+      "coverage": {
+        "target": 108
+      }
+    },
+    {
+      "id": "p4-target-109",
+      "phase": 4,
+      "challenge_decimal": "109",
+      "challenge_hex": "0x000000000000006d",
+      "coverage": {
+        "target": 109
+      }
+    },
+    {
+      "id": "p4-target-110",
+      "phase": 4,
+      "challenge_decimal": "110",
+      "challenge_hex": "0x000000000000006e",
+      "coverage": {
+        "target": 110
+      }
+    },
+    {
+      "id": "p4-target-111",
+      "phase": 4,
+      "challenge_decimal": "111",
+      "challenge_hex": "0x000000000000006f",
+      "coverage": {
+        "target": 111
+      }
+    },
+    {
+      "id": "p4-target-112",
+      "phase": 4,
+      "challenge_decimal": "112",
+      "challenge_hex": "0x0000000000000070",
+      "coverage": {
+        "target": 112
+      }
+    },
+    {
+      "id": "p4-target-113",
+      "phase": 4,
+      "challenge_decimal": "113",
+      "challenge_hex": "0x0000000000000071",
+      "coverage": {
+        "target": 113
+      }
+    },
+    {
+      "id": "p4-target-114",
+      "phase": 4,
+      "challenge_decimal": "114",
+      "challenge_hex": "0x0000000000000072",
+      "coverage": {
+        "target": 114
+      }
+    },
+    {
+      "id": "p4-target-115",
+      "phase": 4,
+      "challenge_decimal": "115",
+      "challenge_hex": "0x0000000000000073",
+      "coverage": {
+        "target": 115
+      }
+    },
+    {
+      "id": "p4-target-116",
+      "phase": 4,
+      "challenge_decimal": "116",
+      "challenge_hex": "0x0000000000000074",
+      "coverage": {
+        "target": 116
+      }
+    },
+    {
+      "id": "p4-target-117",
+      "phase": 4,
+      "challenge_decimal": "117",
+      "challenge_hex": "0x0000000000000075",
+      "coverage": {
+        "target": 117
+      }
+    },
+    {
+      "id": "p4-target-118",
+      "phase": 4,
+      "challenge_decimal": "118",
+      "challenge_hex": "0x0000000000000076",
+      "coverage": {
+        "target": 118
+      }
+    },
+    {
+      "id": "p4-target-119",
+      "phase": 4,
+      "challenge_decimal": "119",
+      "challenge_hex": "0x0000000000000077",
+      "coverage": {
+        "target": 119
+      }
+    },
+    {
+      "id": "p4-target-120",
+      "phase": 4,
+      "challenge_decimal": "120",
+      "challenge_hex": "0x0000000000000078",
+      "coverage": {
+        "target": 120
+      }
+    },
+    {
+      "id": "p4-target-121",
+      "phase": 4,
+      "challenge_decimal": "121",
+      "challenge_hex": "0x0000000000000079",
+      "coverage": {
+        "target": 121
+      }
+    },
+    {
+      "id": "p4-target-122",
+      "phase": 4,
+      "challenge_decimal": "122",
+      "challenge_hex": "0x000000000000007a",
+      "coverage": {
+        "target": 122
+      }
+    },
+    {
+      "id": "p4-target-123",
+      "phase": 4,
+      "challenge_decimal": "123",
+      "challenge_hex": "0x000000000000007b",
+      "coverage": {
+        "target": 123
+      }
+    },
+    {
+      "id": "p4-target-124",
+      "phase": 4,
+      "challenge_decimal": "124",
+      "challenge_hex": "0x000000000000007c",
+      "coverage": {
+        "target": 124
+      }
+    },
+    {
+      "id": "p4-target-125",
+      "phase": 4,
+      "challenge_decimal": "125",
+      "challenge_hex": "0x000000000000007d",
+      "coverage": {
+        "target": 125
+      }
+    },
+    {
+      "id": "p4-target-126",
+      "phase": 4,
+      "challenge_decimal": "126",
+      "challenge_hex": "0x000000000000007e",
+      "coverage": {
+        "target": 126
+      }
+    },
+    {
+      "id": "p4-target-127",
+      "phase": 4,
+      "challenge_decimal": "127",
+      "challenge_hex": "0x000000000000007f",
+      "coverage": {
+        "target": 127
+      }
+    },
+    {
+      "id": "p5-head-0-steps-0",
+      "phase": 5,
+      "challenge_decimal": "0",
+      "challenge_hex": "0x0000000000000000",
+      "coverage": {
+        "head_selector": 0,
+        "steps": 0
+      }
+    },
+    {
+      "id": "p5-head-0-steps-1",
+      "phase": 5,
+      "challenge_decimal": "8",
+      "challenge_hex": "0x0000000000000008",
+      "coverage": {
+        "head_selector": 0,
+        "steps": 1
+      }
+    },
+    {
+      "id": "p5-head-0-steps-2",
+      "phase": 5,
+      "challenge_decimal": "16",
+      "challenge_hex": "0x0000000000000010",
+      "coverage": {
+        "head_selector": 0,
+        "steps": 2
+      }
+    },
+    {
+      "id": "p5-head-0-steps-3",
+      "phase": 5,
+      "challenge_decimal": "24",
+      "challenge_hex": "0x0000000000000018",
+      "coverage": {
+        "head_selector": 0,
+        "steps": 3
+      }
+    },
+    {
+      "id": "p5-head-1-steps-0",
+      "phase": 5,
+      "challenge_decimal": "1",
+      "challenge_hex": "0x0000000000000001",
+      "coverage": {
+        "head_selector": 1,
+        "steps": 0
+      }
+    },
+    {
+      "id": "p5-head-1-steps-1",
+      "phase": 5,
+      "challenge_decimal": "9",
+      "challenge_hex": "0x0000000000000009",
+      "coverage": {
+        "head_selector": 1,
+        "steps": 1
+      }
+    },
+    {
+      "id": "p5-head-1-steps-2",
+      "phase": 5,
+      "challenge_decimal": "17",
+      "challenge_hex": "0x0000000000000011",
+      "coverage": {
+        "head_selector": 1,
+        "steps": 2
+      }
+    },
+    {
+      "id": "p5-head-1-steps-3",
+      "phase": 5,
+      "challenge_decimal": "25",
+      "challenge_hex": "0x0000000000000019",
+      "coverage": {
+        "head_selector": 1,
+        "steps": 3
+      }
+    },
+    {
+      "id": "p5-head-2-steps-0",
+      "phase": 5,
+      "challenge_decimal": "2",
+      "challenge_hex": "0x0000000000000002",
+      "coverage": {
+        "head_selector": 2,
+        "steps": 0
+      }
+    },
+    {
+      "id": "p5-head-2-steps-1",
+      "phase": 5,
+      "challenge_decimal": "10",
+      "challenge_hex": "0x000000000000000a",
+      "coverage": {
+        "head_selector": 2,
+        "steps": 1
+      }
+    },
+    {
+      "id": "p5-head-2-steps-2",
+      "phase": 5,
+      "challenge_decimal": "18",
+      "challenge_hex": "0x0000000000000012",
+      "coverage": {
+        "head_selector": 2,
+        "steps": 2
+      }
+    },
+    {
+      "id": "p5-head-2-steps-3",
+      "phase": 5,
+      "challenge_decimal": "26",
+      "challenge_hex": "0x000000000000001a",
+      "coverage": {
+        "head_selector": 2,
+        "steps": 3
+      }
+    },
+    {
+      "id": "p5-head-3-steps-0",
+      "phase": 5,
+      "challenge_decimal": "3",
+      "challenge_hex": "0x0000000000000003",
+      "coverage": {
+        "head_selector": 3,
+        "steps": 0
+      }
+    },
+    {
+      "id": "p5-head-3-steps-1",
+      "phase": 5,
+      "challenge_decimal": "11",
+      "challenge_hex": "0x000000000000000b",
+      "coverage": {
+        "head_selector": 3,
+        "steps": 1
+      }
+    },
+    {
+      "id": "p5-head-3-steps-2",
+      "phase": 5,
+      "challenge_decimal": "19",
+      "challenge_hex": "0x0000000000000013",
+      "coverage": {
+        "head_selector": 3,
+        "steps": 2
+      }
+    },
+    {
+      "id": "p5-head-3-steps-3",
+      "phase": 5,
+      "challenge_decimal": "27",
+      "challenge_hex": "0x000000000000001b",
+      "coverage": {
+        "head_selector": 3,
+        "steps": 3
+      }
+    },
+    {
+      "id": "p5-head-4-steps-0",
+      "phase": 5,
+      "challenge_decimal": "4",
+      "challenge_hex": "0x0000000000000004",
+      "coverage": {
+        "head_selector": 4,
+        "steps": 0
+      }
+    },
+    {
+      "id": "p5-head-4-steps-1",
+      "phase": 5,
+      "challenge_decimal": "12",
+      "challenge_hex": "0x000000000000000c",
+      "coverage": {
+        "head_selector": 4,
+        "steps": 1
+      }
+    },
+    {
+      "id": "p5-head-4-steps-2",
+      "phase": 5,
+      "challenge_decimal": "20",
+      "challenge_hex": "0x0000000000000014",
+      "coverage": {
+        "head_selector": 4,
+        "steps": 2
+      }
+    },
+    {
+      "id": "p5-head-4-steps-3",
+      "phase": 5,
+      "challenge_decimal": "28",
+      "challenge_hex": "0x000000000000001c",
+      "coverage": {
+        "head_selector": 4,
+        "steps": 3
+      }
+    },
+    {
+      "id": "p5-head-5-steps-0",
+      "phase": 5,
+      "challenge_decimal": "5",
+      "challenge_hex": "0x0000000000000005",
+      "coverage": {
+        "head_selector": 5,
+        "steps": 0
+      }
+    },
+    {
+      "id": "p5-head-5-steps-1",
+      "phase": 5,
+      "challenge_decimal": "13",
+      "challenge_hex": "0x000000000000000d",
+      "coverage": {
+        "head_selector": 5,
+        "steps": 1
+      }
+    },
+    {
+      "id": "p5-head-5-steps-2",
+      "phase": 5,
+      "challenge_decimal": "21",
+      "challenge_hex": "0x0000000000000015",
+      "coverage": {
+        "head_selector": 5,
+        "steps": 2
+      }
+    },
+    {
+      "id": "p5-head-5-steps-3",
+      "phase": 5,
+      "challenge_decimal": "29",
+      "challenge_hex": "0x000000000000001d",
+      "coverage": {
+        "head_selector": 5,
+        "steps": 3
+      }
+    },
+    {
+      "id": "p5-head-6-steps-0",
+      "phase": 5,
+      "challenge_decimal": "6",
+      "challenge_hex": "0x0000000000000006",
+      "coverage": {
+        "head_selector": 6,
+        "steps": 0
+      }
+    },
+    {
+      "id": "p5-head-6-steps-1",
+      "phase": 5,
+      "challenge_decimal": "14",
+      "challenge_hex": "0x000000000000000e",
+      "coverage": {
+        "head_selector": 6,
+        "steps": 1
+      }
+    },
+    {
+      "id": "p5-head-6-steps-2",
+      "phase": 5,
+      "challenge_decimal": "22",
+      "challenge_hex": "0x0000000000000016",
+      "coverage": {
+        "head_selector": 6,
+        "steps": 2
+      }
+    },
+    {
+      "id": "p5-head-6-steps-3",
+      "phase": 5,
+      "challenge_decimal": "30",
+      "challenge_hex": "0x000000000000001e",
+      "coverage": {
+        "head_selector": 6,
+        "steps": 3
+      }
+    },
+    {
+      "id": "p5-head-7-steps-0",
+      "phase": 5,
+      "challenge_decimal": "7",
+      "challenge_hex": "0x0000000000000007",
+      "coverage": {
+        "head_selector": 7,
+        "steps": 0
+      }
+    },
+    {
+      "id": "p5-head-7-steps-1",
+      "phase": 5,
+      "challenge_decimal": "15",
+      "challenge_hex": "0x000000000000000f",
+      "coverage": {
+        "head_selector": 7,
+        "steps": 1
+      }
+    },
+    {
+      "id": "p5-head-7-steps-2",
+      "phase": 5,
+      "challenge_decimal": "23",
+      "challenge_hex": "0x0000000000000017",
+      "coverage": {
+        "head_selector": 7,
+        "steps": 2
+      }
+    },
+    {
+      "id": "p5-head-7-steps-3",
+      "phase": 5,
+      "challenge_decimal": "31",
+      "challenge_hex": "0x000000000000001f",
+      "coverage": {
+        "head_selector": 7,
+        "steps": 3
+      }
+    },
+    {
+      "id": "p6-first-0-second-0",
+      "phase": 6,
+      "challenge_decimal": "0",
+      "challenge_hex": "0x0000000000000000",
+      "coverage": {
+        "first_table_index": 0,
+        "second_table_index": 0
+      }
+    },
+    {
+      "id": "p6-first-0-second-1",
+      "phase": 6,
+      "challenge_decimal": "8",
+      "challenge_hex": "0x0000000000000008",
+      "coverage": {
+        "first_table_index": 0,
+        "second_table_index": 1
+      }
+    },
+    {
+      "id": "p6-first-0-second-2",
+      "phase": 6,
+      "challenge_decimal": "16",
+      "challenge_hex": "0x0000000000000010",
+      "coverage": {
+        "first_table_index": 0,
+        "second_table_index": 2
+      }
+    },
+    {
+      "id": "p6-first-0-second-3",
+      "phase": 6,
+      "challenge_decimal": "24",
+      "challenge_hex": "0x0000000000000018",
+      "coverage": {
+        "first_table_index": 0,
+        "second_table_index": 3
+      }
+    },
+    {
+      "id": "p6-first-0-second-4",
+      "phase": 6,
+      "challenge_decimal": "32",
+      "challenge_hex": "0x0000000000000020",
+      "coverage": {
+        "first_table_index": 0,
+        "second_table_index": 4
+      }
+    },
+    {
+      "id": "p6-first-0-second-5",
+      "phase": 6,
+      "challenge_decimal": "40",
+      "challenge_hex": "0x0000000000000028",
+      "coverage": {
+        "first_table_index": 0,
+        "second_table_index": 5
+      }
+    },
+    {
+      "id": "p6-first-0-second-6",
+      "phase": 6,
+      "challenge_decimal": "48",
+      "challenge_hex": "0x0000000000000030",
+      "coverage": {
+        "first_table_index": 0,
+        "second_table_index": 6
+      }
+    },
+    {
+      "id": "p6-first-0-second-7",
+      "phase": 6,
+      "challenge_decimal": "56",
+      "challenge_hex": "0x0000000000000038",
+      "coverage": {
+        "first_table_index": 0,
+        "second_table_index": 7
+      }
+    },
+    {
+      "id": "p6-first-1-second-0",
+      "phase": 6,
+      "challenge_decimal": "1",
+      "challenge_hex": "0x0000000000000001",
+      "coverage": {
+        "first_table_index": 1,
+        "second_table_index": 0
+      }
+    },
+    {
+      "id": "p6-first-1-second-1",
+      "phase": 6,
+      "challenge_decimal": "9",
+      "challenge_hex": "0x0000000000000009",
+      "coverage": {
+        "first_table_index": 1,
+        "second_table_index": 1
+      }
+    },
+    {
+      "id": "p6-first-1-second-2",
+      "phase": 6,
+      "challenge_decimal": "17",
+      "challenge_hex": "0x0000000000000011",
+      "coverage": {
+        "first_table_index": 1,
+        "second_table_index": 2
+      }
+    },
+    {
+      "id": "p6-first-1-second-3",
+      "phase": 6,
+      "challenge_decimal": "25",
+      "challenge_hex": "0x0000000000000019",
+      "coverage": {
+        "first_table_index": 1,
+        "second_table_index": 3
+      }
+    },
+    {
+      "id": "p6-first-1-second-4",
+      "phase": 6,
+      "challenge_decimal": "33",
+      "challenge_hex": "0x0000000000000021",
+      "coverage": {
+        "first_table_index": 1,
+        "second_table_index": 4
+      }
+    },
+    {
+      "id": "p6-first-1-second-5",
+      "phase": 6,
+      "challenge_decimal": "41",
+      "challenge_hex": "0x0000000000000029",
+      "coverage": {
+        "first_table_index": 1,
+        "second_table_index": 5
+      }
+    },
+    {
+      "id": "p6-first-1-second-6",
+      "phase": 6,
+      "challenge_decimal": "49",
+      "challenge_hex": "0x0000000000000031",
+      "coverage": {
+        "first_table_index": 1,
+        "second_table_index": 6
+      }
+    },
+    {
+      "id": "p6-first-1-second-7",
+      "phase": 6,
+      "challenge_decimal": "57",
+      "challenge_hex": "0x0000000000000039",
+      "coverage": {
+        "first_table_index": 1,
+        "second_table_index": 7
+      }
+    },
+    {
+      "id": "p6-first-2-second-0",
+      "phase": 6,
+      "challenge_decimal": "2",
+      "challenge_hex": "0x0000000000000002",
+      "coverage": {
+        "first_table_index": 2,
+        "second_table_index": 0
+      }
+    },
+    {
+      "id": "p6-first-2-second-1",
+      "phase": 6,
+      "challenge_decimal": "10",
+      "challenge_hex": "0x000000000000000a",
+      "coverage": {
+        "first_table_index": 2,
+        "second_table_index": 1
+      }
+    },
+    {
+      "id": "p6-first-2-second-2",
+      "phase": 6,
+      "challenge_decimal": "18",
+      "challenge_hex": "0x0000000000000012",
+      "coverage": {
+        "first_table_index": 2,
+        "second_table_index": 2
+      }
+    },
+    {
+      "id": "p6-first-2-second-3",
+      "phase": 6,
+      "challenge_decimal": "26",
+      "challenge_hex": "0x000000000000001a",
+      "coverage": {
+        "first_table_index": 2,
+        "second_table_index": 3
+      }
+    },
+    {
+      "id": "p6-first-2-second-4",
+      "phase": 6,
+      "challenge_decimal": "34",
+      "challenge_hex": "0x0000000000000022",
+      "coverage": {
+        "first_table_index": 2,
+        "second_table_index": 4
+      }
+    },
+    {
+      "id": "p6-first-2-second-5",
+      "phase": 6,
+      "challenge_decimal": "42",
+      "challenge_hex": "0x000000000000002a",
+      "coverage": {
+        "first_table_index": 2,
+        "second_table_index": 5
+      }
+    },
+    {
+      "id": "p6-first-2-second-6",
+      "phase": 6,
+      "challenge_decimal": "50",
+      "challenge_hex": "0x0000000000000032",
+      "coverage": {
+        "first_table_index": 2,
+        "second_table_index": 6
+      }
+    },
+    {
+      "id": "p6-first-2-second-7",
+      "phase": 6,
+      "challenge_decimal": "58",
+      "challenge_hex": "0x000000000000003a",
+      "coverage": {
+        "first_table_index": 2,
+        "second_table_index": 7
+      }
+    },
+    {
+      "id": "p6-first-3-second-0",
+      "phase": 6,
+      "challenge_decimal": "3",
+      "challenge_hex": "0x0000000000000003",
+      "coverage": {
+        "first_table_index": 3,
+        "second_table_index": 0
+      }
+    },
+    {
+      "id": "p6-first-3-second-1",
+      "phase": 6,
+      "challenge_decimal": "11",
+      "challenge_hex": "0x000000000000000b",
+      "coverage": {
+        "first_table_index": 3,
+        "second_table_index": 1
+      }
+    },
+    {
+      "id": "p6-first-3-second-2",
+      "phase": 6,
+      "challenge_decimal": "19",
+      "challenge_hex": "0x0000000000000013",
+      "coverage": {
+        "first_table_index": 3,
+        "second_table_index": 2
+      }
+    },
+    {
+      "id": "p6-first-3-second-3",
+      "phase": 6,
+      "challenge_decimal": "27",
+      "challenge_hex": "0x000000000000001b",
+      "coverage": {
+        "first_table_index": 3,
+        "second_table_index": 3
+      }
+    },
+    {
+      "id": "p6-first-3-second-4",
+      "phase": 6,
+      "challenge_decimal": "35",
+      "challenge_hex": "0x0000000000000023",
+      "coverage": {
+        "first_table_index": 3,
+        "second_table_index": 4
+      }
+    },
+    {
+      "id": "p6-first-3-second-5",
+      "phase": 6,
+      "challenge_decimal": "43",
+      "challenge_hex": "0x000000000000002b",
+      "coverage": {
+        "first_table_index": 3,
+        "second_table_index": 5
+      }
+    },
+    {
+      "id": "p6-first-3-second-6",
+      "phase": 6,
+      "challenge_decimal": "51",
+      "challenge_hex": "0x0000000000000033",
+      "coverage": {
+        "first_table_index": 3,
+        "second_table_index": 6
+      }
+    },
+    {
+      "id": "p6-first-3-second-7",
+      "phase": 6,
+      "challenge_decimal": "59",
+      "challenge_hex": "0x000000000000003b",
+      "coverage": {
+        "first_table_index": 3,
+        "second_table_index": 7
+      }
+    },
+    {
+      "id": "p6-first-4-second-0",
+      "phase": 6,
+      "challenge_decimal": "4",
+      "challenge_hex": "0x0000000000000004",
+      "coverage": {
+        "first_table_index": 4,
+        "second_table_index": 0
+      }
+    },
+    {
+      "id": "p6-first-4-second-1",
+      "phase": 6,
+      "challenge_decimal": "12",
+      "challenge_hex": "0x000000000000000c",
+      "coverage": {
+        "first_table_index": 4,
+        "second_table_index": 1
+      }
+    },
+    {
+      "id": "p6-first-4-second-2",
+      "phase": 6,
+      "challenge_decimal": "20",
+      "challenge_hex": "0x0000000000000014",
+      "coverage": {
+        "first_table_index": 4,
+        "second_table_index": 2
+      }
+    },
+    {
+      "id": "p6-first-4-second-3",
+      "phase": 6,
+      "challenge_decimal": "28",
+      "challenge_hex": "0x000000000000001c",
+      "coverage": {
+        "first_table_index": 4,
+        "second_table_index": 3
+      }
+    },
+    {
+      "id": "p6-first-4-second-4",
+      "phase": 6,
+      "challenge_decimal": "36",
+      "challenge_hex": "0x0000000000000024",
+      "coverage": {
+        "first_table_index": 4,
+        "second_table_index": 4
+      }
+    },
+    {
+      "id": "p6-first-4-second-5",
+      "phase": 6,
+      "challenge_decimal": "44",
+      "challenge_hex": "0x000000000000002c",
+      "coverage": {
+        "first_table_index": 4,
+        "second_table_index": 5
+      }
+    },
+    {
+      "id": "p6-first-4-second-6",
+      "phase": 6,
+      "challenge_decimal": "52",
+      "challenge_hex": "0x0000000000000034",
+      "coverage": {
+        "first_table_index": 4,
+        "second_table_index": 6
+      }
+    },
+    {
+      "id": "p6-first-4-second-7",
+      "phase": 6,
+      "challenge_decimal": "60",
+      "challenge_hex": "0x000000000000003c",
+      "coverage": {
+        "first_table_index": 4,
+        "second_table_index": 7
+      }
+    },
+    {
+      "id": "p6-first-5-second-0",
+      "phase": 6,
+      "challenge_decimal": "5",
+      "challenge_hex": "0x0000000000000005",
+      "coverage": {
+        "first_table_index": 5,
+        "second_table_index": 0
+      }
+    },
+    {
+      "id": "p6-first-5-second-1",
+      "phase": 6,
+      "challenge_decimal": "13",
+      "challenge_hex": "0x000000000000000d",
+      "coverage": {
+        "first_table_index": 5,
+        "second_table_index": 1
+      }
+    },
+    {
+      "id": "p6-first-5-second-2",
+      "phase": 6,
+      "challenge_decimal": "21",
+      "challenge_hex": "0x0000000000000015",
+      "coverage": {
+        "first_table_index": 5,
+        "second_table_index": 2
+      }
+    },
+    {
+      "id": "p6-first-5-second-3",
+      "phase": 6,
+      "challenge_decimal": "29",
+      "challenge_hex": "0x000000000000001d",
+      "coverage": {
+        "first_table_index": 5,
+        "second_table_index": 3
+      }
+    },
+    {
+      "id": "p6-first-5-second-4",
+      "phase": 6,
+      "challenge_decimal": "37",
+      "challenge_hex": "0x0000000000000025",
+      "coverage": {
+        "first_table_index": 5,
+        "second_table_index": 4
+      }
+    },
+    {
+      "id": "p6-first-5-second-5",
+      "phase": 6,
+      "challenge_decimal": "45",
+      "challenge_hex": "0x000000000000002d",
+      "coverage": {
+        "first_table_index": 5,
+        "second_table_index": 5
+      }
+    },
+    {
+      "id": "p6-first-5-second-6",
+      "phase": 6,
+      "challenge_decimal": "53",
+      "challenge_hex": "0x0000000000000035",
+      "coverage": {
+        "first_table_index": 5,
+        "second_table_index": 6
+      }
+    },
+    {
+      "id": "p6-first-5-second-7",
+      "phase": 6,
+      "challenge_decimal": "61",
+      "challenge_hex": "0x000000000000003d",
+      "coverage": {
+        "first_table_index": 5,
+        "second_table_index": 7
+      }
+    },
+    {
+      "id": "p6-first-6-second-0",
+      "phase": 6,
+      "challenge_decimal": "6",
+      "challenge_hex": "0x0000000000000006",
+      "coverage": {
+        "first_table_index": 6,
+        "second_table_index": 0
+      }
+    },
+    {
+      "id": "p6-first-6-second-1",
+      "phase": 6,
+      "challenge_decimal": "14",
+      "challenge_hex": "0x000000000000000e",
+      "coverage": {
+        "first_table_index": 6,
+        "second_table_index": 1
+      }
+    },
+    {
+      "id": "p6-first-6-second-2",
+      "phase": 6,
+      "challenge_decimal": "22",
+      "challenge_hex": "0x0000000000000016",
+      "coverage": {
+        "first_table_index": 6,
+        "second_table_index": 2
+      }
+    },
+    {
+      "id": "p6-first-6-second-3",
+      "phase": 6,
+      "challenge_decimal": "30",
+      "challenge_hex": "0x000000000000001e",
+      "coverage": {
+        "first_table_index": 6,
+        "second_table_index": 3
+      }
+    },
+    {
+      "id": "p6-first-6-second-4",
+      "phase": 6,
+      "challenge_decimal": "38",
+      "challenge_hex": "0x0000000000000026",
+      "coverage": {
+        "first_table_index": 6,
+        "second_table_index": 4
+      }
+    },
+    {
+      "id": "p6-first-6-second-5",
+      "phase": 6,
+      "challenge_decimal": "46",
+      "challenge_hex": "0x000000000000002e",
+      "coverage": {
+        "first_table_index": 6,
+        "second_table_index": 5
+      }
+    },
+    {
+      "id": "p6-first-6-second-6",
+      "phase": 6,
+      "challenge_decimal": "54",
+      "challenge_hex": "0x0000000000000036",
+      "coverage": {
+        "first_table_index": 6,
+        "second_table_index": 6
+      }
+    },
+    {
+      "id": "p6-first-6-second-7",
+      "phase": 6,
+      "challenge_decimal": "62",
+      "challenge_hex": "0x000000000000003e",
+      "coverage": {
+        "first_table_index": 6,
+        "second_table_index": 7
+      }
+    },
+    {
+      "id": "p6-first-7-second-0",
+      "phase": 6,
+      "challenge_decimal": "7",
+      "challenge_hex": "0x0000000000000007",
+      "coverage": {
+        "first_table_index": 7,
+        "second_table_index": 0
+      }
+    },
+    {
+      "id": "p6-first-7-second-1",
+      "phase": 6,
+      "challenge_decimal": "15",
+      "challenge_hex": "0x000000000000000f",
+      "coverage": {
+        "first_table_index": 7,
+        "second_table_index": 1
+      }
+    },
+    {
+      "id": "p6-first-7-second-2",
+      "phase": 6,
+      "challenge_decimal": "23",
+      "challenge_hex": "0x0000000000000017",
+      "coverage": {
+        "first_table_index": 7,
+        "second_table_index": 2
+      }
+    },
+    {
+      "id": "p6-first-7-second-3",
+      "phase": 6,
+      "challenge_decimal": "31",
+      "challenge_hex": "0x000000000000001f",
+      "coverage": {
+        "first_table_index": 7,
+        "second_table_index": 3
+      }
+    },
+    {
+      "id": "p6-first-7-second-4",
+      "phase": 6,
+      "challenge_decimal": "39",
+      "challenge_hex": "0x0000000000000027",
+      "coverage": {
+        "first_table_index": 7,
+        "second_table_index": 4
+      }
+    },
+    {
+      "id": "p6-first-7-second-5",
+      "phase": 6,
+      "challenge_decimal": "47",
+      "challenge_hex": "0x000000000000002f",
+      "coverage": {
+        "first_table_index": 7,
+        "second_table_index": 5
+      }
+    },
+    {
+      "id": "p6-first-7-second-6",
+      "phase": 6,
+      "challenge_decimal": "55",
+      "challenge_hex": "0x0000000000000037",
+      "coverage": {
+        "first_table_index": 7,
+        "second_table_index": 6
+      }
+    },
+    {
+      "id": "p6-first-7-second-7",
+      "phase": 6,
+      "challenge_decimal": "63",
+      "challenge_hex": "0x000000000000003f",
+      "coverage": {
+        "first_table_index": 7,
+        "second_table_index": 7
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+schema: bomblab-direct-challenge-suite-v1
+generator_sha256: dfc36dd23d22fe6c71098bbc3fa21b55dd2b4adcfd493dbc85767c82156b0a27
+manifest_sha256: 02c2e2e6fba56a89b2e205284de8f7c3439b59df8653e41d928e439eb14bff2e
+defuser_source_sha256: b7684f22ad44745bac27faad1036e3bc290f167f29f3b147909ca50045d65e29
+solver_executable_sha256: d50fc10015707e060dbf8ad2656b53621e73a66acf3f92e2f760b775c0a6142d
+bomb_sha256: ecbbf2c8f382cd638e762e4494f41bff160ad80c87ea0c7da720914fdccf47b7
+python: 3.12.3
+platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+direct-challenge branch suite: 242/242 PASS

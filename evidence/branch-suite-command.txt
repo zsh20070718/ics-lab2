@@ -1,0 +1,10 @@
+Working directory:
+C:\Users\张圣皓\Desktop\zsh\大二\hw-solver\task-20261016-003619-bomb-author-d0aeaa382275
+
+Exact PowerShell command:
+wsl --cd "C:\Users\张圣皓\Desktop\zsh\大二\hw-solver\task-20261016-003619-bomb-author-d0aeaa382275" env PYTHONDONTWRITEBYTECODE=1 LC_ALL=C timeout 120s python3 -B evidence/run_branch_suite.py --root work/BombLab --solver cache/defuser.tested --bomb work/BombLab/bomb --manifest evidence/branch-suite-cases.json --results evidence/branch-suite-results.json --summary evidence/branch-suite.txt
+
+The harness runs one solver process and one bomb process at a time. Each child is
+bounded by runner.py to 3 seconds CPU/wall handling, 512 MiB address space,
+64 KiB output, no core file, and a fresh process group that is killed on timeout.
+The outer command is bounded to 120 seconds. No network or listener is used.
